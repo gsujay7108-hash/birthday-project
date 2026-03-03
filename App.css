@@ -1,0 +1,61 @@
+:root {
+  --bg: #050508;
+  --glass: rgba(255, 255, 255, 0.05);
+}
+
+body, html, #root {
+  margin: 0; padding: 0;
+  width: 100%; height: 100%;
+  background-color: var(--bg);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  background: radial-gradient(circle at center, #111122 0%, #050508 100%);
+}
+
+.prank-screen {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hint {
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.7rem;
+}
+
+.cake-btn {
+  position: absolute;
+  background: none; border: none;
+  cursor: pointer;
+  filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.5));
+  transition: all 0.1s ease-out;
+}
+
+.orb-screen { height: 100vh; width: 100vw; animation: fadeIn 1.5s ease; }
+
+.overlay {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  display: flex; flex-direction: column; justify-content: space-between;
+  align-items: center; padding: 50px; pointer-events: none;
+}
+
+.title {
+  color: white; font-weight: 200; letter-spacing: 5px;
+  text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.upload-btn {
+  pointer-events: auto; background: var(--glass);
+  backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1);
+  padding: 12px 25px; border-radius: 50px; color: white;
+  display: flex; align-items: center; gap: 10px; cursor: pointer;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
